@@ -1,20 +1,17 @@
 import React from "react";
 import Navbar from "./Pages/Navbar";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./Pages/Home.page";
-import User from "./Pages/user/User";
-import Adduser from "./Pages/user/Adduser";
-import Edit from "./Pages/user/Edit";
+import { routers } from "./router";
 const App = () => {
   return (
     <BrowserRouter>
       <div className="app">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/users/:id" element={<User />} />
-          <Route path="/add-user" element={<Adduser />} />
-          <Route path="/edit-user/:id" element={<Edit />} />
+          {routers &&
+            routers.map((router, index) => (
+              <Route path={router.path} element={router.element} />
+            ))}
         </Routes>
       </div>
     </BrowserRouter>

@@ -21,16 +21,16 @@ const Adduser = () => {
   }
 
   return (
-    <div className="w-screen h-full justify-center flex flex-col items-center mt-16 ">
+    <div className="admin__section ">
       <h1 className="text-[35px] font-bold">Add User</h1>
 
-      <form className="w-[80%] h-full flex flex-col justify-center items-center border p-3">
+      <form className="admin__form">
         <input
           value={name}
           onChange={(e) => setName(e.target.value)}
           type="text"
           placeholder="Enter your Name"
-          className="w-[80%] text-xl font-normal p-5 outline-none"
+          className="custominput"
         />
 
         <input
@@ -38,7 +38,7 @@ const Adduser = () => {
           onChange={(e) => setEmail(e.target.value)}
           type="email"
           placeholder="Enter your Email"
-          className="w-[80%] text-xl font-normal p-5 outline-none"
+          className="custominput"
         />
 
         <input
@@ -46,14 +46,10 @@ const Adduser = () => {
           onChange={(e) => setPhone(e.target.value)}
           type="phone"
           placeholder="Enter your Phone"
-          className="w-[80%] text-xl font-normal p-5 outline-none"
+          className="custominput"
         />
 
-        <button
-          onClick={Submit}
-          type="submit"
-          className="bg-blue-500 text-white p-2 rounded-lg w-full"
-        >
+        <button onClick={Submit} type="submit" className="custom__button">
           Submit
         </button>
       </form>

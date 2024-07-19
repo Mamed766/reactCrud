@@ -15,18 +15,9 @@ const User = () => {
   }, []);
 
   return (
-    <div className="w-full h-full flex flex-col gap-2  justify-center items-center ">
+    <div className="view__section">
       {user && (
-        <div
-          className="w-[700px] h-[700px] flex bg-blue-300 justify-between mt-16
-          items-center
-          font-bold
-          italic
-          text-[25px]
-          rounded-lg
-          px-20
-      "
-        >
+        <div className="view__section--container">
           <div className="flex flex-col gap-3 ">
             <h2 className="border-b-2">Name:</h2>
             <h2 className="border-b-2">Emai:</h2>
